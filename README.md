@@ -2,5 +2,5 @@
 Liten app for testing av JDBC / sqlite
 
 
-- JavaFX applikasjon
+- JavaFX + FXML applikasjon
 - Søke, liste, slette og hente informasjon om medlemmer i en database
