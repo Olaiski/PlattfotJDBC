@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextArea?>
+<DialogPane fx:controller="sample.controller.QueryNavnController" xmlns:fx="http://javafx.com/fxml/1">
+
+    <headerText>
+        Søk etter person i db
+    </headerText>
+
+    <content>
+        <BorderPane >
+            <center>
+                <TextField fx:id="tfSokNavn" promptText="Søk..." alignment="CENTER"/>
+            </center>
+        </BorderPane>
+    </content>
+
+
+</DialogPane>

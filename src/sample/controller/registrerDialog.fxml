@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<DialogPane fx:controller="sample.controller.DialogController" xmlns:fx="http://javafx.com/fxml/1">
+
+    <headerText>
+        Legg til nytt medlem..
+    </headerText>
+
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Navn:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="tfNavn" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Epost:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="tfEpost" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Adresse:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="tfAdresse" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Telefon:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="tfTelefon" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+
+
+</DialogPane>

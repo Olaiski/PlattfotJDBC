@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane fx:id="mainBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            fx:controller="sample.controller.Controller" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <items>
+                    <MenuItem onAction="#visRegistrerDialog" text="Nytt medlem"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem onAction="#visEndreDialog" text="Endre medlem"/>
+                    <SeparatorMenuItem />
+                    <MenuItem onAction="#regKontigentDialog" text="Registrer kontigent" />
+                    <MenuItem onAction="#avslutt" text="Avslutt"/>
+                </items>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TableView fx:id="medlemTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn prefWidth="${medlemTable.width}" text="Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <BorderPane.margin>
+                <Insets right="10.0" />
+            </BorderPane.margin>
+        </TableView>
+    </center>
+
+    <right>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="170.00" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button onAction="#sokMedlem" maxWidth="Infinity" mnemonicParsing="false" text="Søk på Medlemmer (navn)" />
+                <Button onAction="#listMedlemmer" maxWidth="Infinity" mnemonicParsing="false" text="List Medlemmer" />
+                <Button onAction="#slettMedlem" maxWidth="Infinity" mnemonicParsing="false" text="Slett medlem" />
+                <Button onAction="#hentMedlemInfo" maxWidth="Infinity" mnemonicParsing="false" text="Hent medlem info" />
+                <Text fx:id="medlemTxt" text="Medlem Info:" visible="false"/>
+                <Text fx:id="epostTxt"/>
+                <Text fx:id="navnTxt"/>
+                <Text fx:id="adrTxt"/>
+                <Text fx:id="tlfTxt"/>
+            </children>
+            <BorderPane.margin>
+                <Insets right="10.0" />
+            </BorderPane.margin>
+        </VBox>
+    </right>
+    <bottom>
+        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <ProgressBar fx:id="progressBar" visible="false" prefWidth="500.0" progress="0.0">
+                    <HBox.margin>
+                        <Insets left="50.0" />
+                    </HBox.margin>
+                </ProgressBar>
+                <Text fx:id="statusTxt" visible="false"/>
+            </children>
+        </VBox>
+    </bottom>
+</BorderPane>

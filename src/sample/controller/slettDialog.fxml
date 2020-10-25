@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<DialogPane fx:controller="sample.controller.SlettController" xmlns:fx="http://javafx.com/fxml/1">
+
+
+
+    <content>
+        <BorderPane>
+          <top>
+              <HBox alignment="CENTER">
+                  <Label text="Er du sikker på at du vil slette: "/>
+                  <Label fx:id="lblNavn"/>
+                  <Label text=" fra databasen?" />
+              </HBox>
+          </top>
+
+        </BorderPane>
+    </content>
+
+
+</DialogPane>
